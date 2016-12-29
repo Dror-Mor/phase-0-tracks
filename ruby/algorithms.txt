@@ -22,4 +22,4 @@ Making coffee
 	-if clean, put 1 teaspoon of coffee and 1 teaspoon of sugar
 -Add 0.3L of water from kettle
 -Add 0.1L of milk
--stir for 5 seconds
+-stir for 5 seconds.
