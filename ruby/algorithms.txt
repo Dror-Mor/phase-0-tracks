@@ -1,0 +1,25 @@
+Using an elevator 
+-Push elevator button
+-When door opens, walk in.
+-Turn around 180 degrees (to face button panel)
+-Check current floor number
+-When told to go up/down number of floors, add/deduct the number of floors from current floor for a result
+-Press button that equals to the result
+-Every time the door opens, check current floor number
+	-if door opens and current floor matches result - exit.
+
+
+Making coffee
+-Check if kettle is empty.
+	-if empty, fill 0.8L of water.
+	-if not empty, dispose of the water and refill with 0.8L of water.
+-turn stove on.
+-Put kettle on stove.
+-When kettle whistles, turn stove off.
+-Take a mug
+-check if mug is clean
+	-if not clean, put 0.1L of hot water and empty mug
+	-if clean, put 1 teaspoon of coffee and 1 teaspoon of sugar
+-Add 0.3L of water from kettle
+-Add 0.1L of milk
+-stir for 5 seconds
