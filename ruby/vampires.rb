@@ -48,22 +48,24 @@ while count > 0
 	end
 
 	if suspicious_allergy
-		puts "Probably a vampire."
+		puts "\nProbably a vampire."
 	elsif got_age_right
 		if likes_garlic || agreed_to_insurance
-			puts "Probably not a vampire."
+			puts "\nProbably not a vampire."
 		else 
-			puts "Results inconclusive."
+			puts "\nResults inconclusive."
 		end
 	elsif !likes_garlic && !agreed_to_insurance # got age wrong
-		puts "Almost certainly a vampire."
+		puts "\nAlmost certainly a vampire."
 	elsif !likes_garlic || !agreed_to_insurance
-		puts "Probably a vampire."
+		puts "\nProbably a vampire."
 	elsif employee_name == "Drake Cula" || employee_name == "Tu Fang"
-		puts "Definitely a vampire."
+		puts "\nDefinitely a vampire."
 	else
-		puts "Results inconclusive."
+		puts "\nResults inconclusive."
 	end
-	
+
 	count -= 1
 end
+
+puts "\nActually, never mind! What do these questions have to do with anything? \nLet's all be friends."
