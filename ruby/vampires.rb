@@ -33,17 +33,37 @@ while count > 0
 		agreed_to_insurance = false
 	end
 
-	if got_age_right && (likes_garlic || agreed_to_insurance)
-		puts "Probably not a vampire."
-	elsif !got_age_right && !(likes_garlic || agreed_to_insurance)
+	suspicious_allergy = false
+	continue = true
+
+	while continue
+		puts "Name any allergies you might have. When finished, pleast type `done`."
+		allergy = gets.chomp
+		if allergy == "sunshine"
+			suspicious_allergy = true
+			continue = false
+		elsif allergy == "done"
+			continue = false
+		end
+	end
+
+	if suspicious_allergy
 		puts "Probably a vampire."
-	elsif !got_age_right && !likes_garlic && !agreed_to_insurance
+	elsif got_age_right
+		if likes_garlic || agreed_to_insurance
+			puts "Probably not a vampire."
+		else 
+			puts "Results inconclusive."
+		end
+	elsif !likes_garlic && !agreed_to_insurance # got age wrong
 		puts "Almost certainly a vampire."
+	elsif !likes_garlic || !agreed_to_insurance
+		puts "Probably a vampire."
 	elsif employee_name == "Drake Cula" || employee_name == "Tu Fang"
 		puts "Definitely a vampire."
 	else
 		puts "Results inconclusive."
 	end
-
+	
 	count -= 1
 end
