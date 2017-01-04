@@ -1,20 +1,31 @@
-
 body{
 	font-family: tahoma;
+	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+.center
+{
+	width: 945px;
+    margin: auto;
 }
 header{
 	width: 940px;
 	text-align: center;
-	background-color: #b5b4aa;
+	margin: auto;
+	color:white;
 }
 
 footer{
 	width: 940px;
 	text-align: center;
-	background-color: #b5b4aa;
+	margin: auto;
+	color:white;
 	padding: 10px 0 10px 0;
 }
 
+code{
+	font-family: serif;
+}
 
 .column-1 {
 	display: inline-block;
