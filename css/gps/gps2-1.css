@@ -1,18 +1,17 @@
 body{
 	font-family: tahoma;
-	background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	background: linear-gradient(141deg, #b5e0ff 0%, #7ac7ff 51%, #c8e3f7 75%);
 }
 
-.center
-{
-	width: 945px;
-    margin: auto;
-}
 header{
 	width: 940px;
 	text-align: center;
 	margin: auto;
 	color:white;
+	background-image: url(tools_cropped.png);
+	background-repeat: repeat;
+	background-position: center;
+	background-size: 10%;
 }
 
 footer{
@@ -25,6 +24,12 @@ footer{
 
 code{
 	font-family: serif;
+}
+
+.center
+{
+	width: 945px;
+    margin: auto;
 }
 
 .column-1 {
