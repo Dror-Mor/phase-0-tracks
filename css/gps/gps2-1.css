@@ -1,0 +1,32 @@
+
+body{
+	font-family: tahoma;
+}
+header{
+	width: 940px;
+	text-align: center;
+	background-color: #b5b4aa;
+}
+
+footer{
+	width: 940px;
+	text-align: center;
+	background-color: #b5b4aa;
+	padding: 10px 0 10px 0;
+}
+
+
+.column-1 {
+	display: inline-block;
+	width: 450px;
+	padding-right: 20px;
+
+}
+
+.column-2 {
+	display: inline-block;
+	width: 450px;
+	vertical-align: top;
+	padding-left: 20px;
+
+}
