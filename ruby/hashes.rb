@@ -71,7 +71,7 @@ case user_input
 	
 end
 
-puts "Here is the final output:"
+puts "\nHere is the final output:"
 p cliant
 
 
