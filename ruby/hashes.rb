@@ -36,10 +36,10 @@ else
 	cliant[:eco] = false
 end
 
-puts "Please review the following information:"
+puts "\nPlease review the following information:"
 p cliant
 
-puts "Would you like the change any of the following? if so, please type field name. if not, please type `none`"
+puts "\nWould you like the change any of the following?\nif so, please type field name. if not, please type `none`"
 user_input = gets.chomp
 case user_input
 	when "name"
@@ -49,5 +49,30 @@ case user_input
 		puts "Please enter new age:"
 		user_input = gets.chomp
 		cliant[:age] = user_input.to_i
+	when "children"
+		user_input = gets.chomp
+		cliant[:children] = user_input.to_i
+	when "decor"
+		puts "Please enter new decor theme:"
+		cliant[:decore] = gets.chomp
+	when "rooms"
+		puts "Please enter new number of rooms:"
+		user_input = gets.chomp
+		cliant[:rooms] = user_input.to_i
+	when "eco"
+		puts "Would you like the design to be eco friendly? (y/n)"
+		user_input = gets.chomp
+		if user_input == "y"
+		cliant[:eco] = true
+		else
+		cliant[:eco] = false
+		end
+	when "none"
+	
+end
+
+puts "Here is the final output:"
+p cliant
+
 
 	
