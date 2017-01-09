@@ -43,3 +43,62 @@ numbers.delete_if {|number| number.to_i > 6}
 
 puts "modified array:" 
 puts numbers
+
+puts "Original hash"
+puts letters
+
+letters.delete_if {|key, value| key == :third}
+
+puts "modified hash"
+puts letters
+
+numbers = [1, 2, 3, 4, 5, 6, 7] 
+
+letters = {
+	first: "a",
+	second: "b",
+	third: "c",
+	fourth: "d"
+}
+
+puts "Original array:" 
+puts numbers
+
+numbers.keep_if {|number| number > 3}
+
+puts "modified array:" 
+puts numbers
+
+puts "Original hash"
+puts letters
+
+letters.keep_if {|key, value| key == :third || key == :first }
+
+puts "modified hash"
+puts letters
+
+numbers = [1, 2, 2, 4, 4, 6, 7] 
+
+letters = {
+	first: "a",
+	first: "b",
+	third: "c",
+	fourth: "d"
+}
+
+puts "Original array:" 
+puts numbers
+
+numbers.reject! {|number| number < 7}
+
+puts "modified array:" 
+puts numbers
+
+puts "Original hash"
+puts letters
+
+letters.reject! {|key, value| key != :fifth}
+
+puts "modified hash"
+puts letters
+
