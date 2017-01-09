@@ -81,7 +81,7 @@ numbers = [1, 2, 2, 4, 4, 6, 7]
 
 letters = {
 	first: "a",
-	first: "b",
+	second: "b",
 	third: "c",
 	fourth: "d"
 }
@@ -89,7 +89,7 @@ letters = {
 puts "Original array:" 
 puts numbers
 
-numbers.reject! {|number| number < 7}
+numbers.reject! {|number| number < 7} # reject any number that's smaller than 7
 
 puts "modified array:" 
 puts numbers
@@ -97,8 +97,15 @@ puts numbers
 puts "Original hash"
 puts letters
 
-letters.reject! {|key, value| key != :fifth}
+letters.reject! {|key, value| key != :fifth} # reject any key that's not fifth. returns nil when nothing meets the condition.
 
 puts "modified hash"
 puts letters
+
+numbers = [1, 2, 3, 4, 5, 6, 7] 
+puts "Original array:" 
+puts numbers
+
+puts "modified array:" 
+puts numbers.drop_while {|i| i < 4}
 
