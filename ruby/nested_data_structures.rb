@@ -44,3 +44,17 @@ puts "\nHere is a list for emloyees at the mens department:"
 store[:mens][:sellers].each do |names|
 	puts names
 end
+
+# Replace "Golden belt" with "Silver earing" in the womens deparment items on sale. and print new list.
+puts "\nItems on sale in the womens department before:"
+puts store[:womens][:items_on_sale]
+store[:womens][:items_on_sale][0] = "Silver earing"
+puts "\nItems on sale in the womens department after:" 
+puts store[:womens][:items_on_sale]
+
+# Reduce number of shelves to 2 in the kids department
+puts "\nNumber of shelves before:"
+puts store[:kids][:racks][:shelves]
+store[:kids][:racks][:shelves] -= 1
+puts "\nNumber of shelves after:"
+puts store[:kids][:racks][:shelves]
