@@ -1,40 +1,40 @@
 # #Release 0
-# def search_array(arr, int) 
-# 	index_list = []
-# 	for i in 0..arr.length 
-# 		if int == arr[i]
-# 			index_list << "#{i}"
-# 		else
+def search_array(arr, int) 
+	index_list = []
+	for i in 0..arr.length 
+		if int == arr[i]
+			index_list << "#{i}"
+		else
 			
-# 		end
-# 	end
-# 	if index_list == []
-# 		puts "nil"
-# 	else
-# 		puts "The number #{int} appears in index:"
-# 		puts index_list
-# 	end
-# end
+		end
+	end
+	if index_list == []
+		puts "nil"
+	else
+		puts "The number #{int} appears in index:"
+		puts index_list
+	end
+end
 
-# array = [1, 2, 3, 4, 5 , 3]
+array = [1, 2, 3, 4, 5 , 3]
 
-# search_array(array, 3)
+search_array(array, 3)
 
 #Release 1
 
-# def fibonacci(num)
-# 	arr = [0, 1]
-# 	for i in 1..num-2
-# 		arr << arr[i]+arr[i-1]
-# 	end
-# 	puts arr
-# 	if arr.last == 218922995834555169026
-# 		puts "Looks great!"
-# 	else	
-# 	end
-# end
+def fibonacci(num)
+	arr = [0, 1]
+	for i in 1..num-2
+		arr << arr[i]+arr[i-1]
+	end
+	puts arr
+	if arr.last == 218922995834555169026
+		puts "Looks great!"
+	else	
+	end
+end
 
-# fibonacci(100)
+fibonacci(100)
 
 # Release 2
 # create a method that gets an array
