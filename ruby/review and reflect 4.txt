@@ -1,0 +1,49 @@
+1. What is a variable? Why might a programmer use a variable?
+	-A variable is an element used to declare different types of information in our code. we use it to 
+make our code more readable, to simplify and better define our work.
+
+2.  If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be. 
+	-Ruby will first add the variables on the right side of the equation and then assign the new expression to the variable on the left
+
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+string - a series of characters “a1b2c3”
+integer - a number with no decimal point: 44
+float - a number with a decimal point: 4.4
+nil - this expression is used to define that there is no information at the moment in this place. if I ask to see what is in a certain index that is empty, I will get “nil”.
+boolean - a true or false statement.
+
+4. What is an algorithm?
+	-A methodical path to completing a task
+
+5. What are two common categories of algorithm in computer science? 
+	a. searching
+	b. sorting
+
+6. What is a method? Why might a programmer choose to use a method?
+	- A method is a task that is fulfilled inside a set of commands within your code. a programer will use it when an action needs to be used in several different places in their code
+of when a few tasks are combined to create the final outcome. 
+
+7. Define the following terms as they relate to a method. 
+return value - the last piece of information given by the method
+side effect - a piece of information that is created within the method, but is not the return value.
+parameter - a variable that is an integral part of the methods definition 
+argument - what we use to call a method within the code.
+implicit return - a last value that comes from the method without a specific return command  
+
+
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+ - A global scope is the information available throughout the entire code, no matter where you are - loop, method or any other element. a method scope is the information 
+available only within the method. once the method is done, unless defined otherwise, the variables from within the method won’t continue on outside of it. 
+
+9. What is control flow? Why might a programmer choose to use flow control?
+	-Control flow allows us to navigate throughout the code, create conditions, loop and return.
+
+10. Define the following terms as they relate to flow control.
+
+loop - an action that repeats itself within the code. can be limited by numbers or statements.
+if - a statement that conditions the action within it
+else - if non of the other conditions is met, what comes after “else” will occur 
+elsif - another possible condition that could be fullfiled
+while - a loop that will continue as long as the conditioned statement is true  
+until - a loop that will continue as long as the conditioned statement is false
