@@ -1,9 +1,9 @@
 # ask user for their full name
 # split the string
 # swap between first and last name
-# create a loop that cheks if letter is vowel or consonant
-# 	-if vowel - create a method that finds the next vowel and call it
-# 	-else use .next to replace the consonant.
+# create a loop that cheks if letter is vowel or consonant / upper or lower case
+# repalce letter with the following one
+
 continue = true
 new_names = []
 original_names = []
