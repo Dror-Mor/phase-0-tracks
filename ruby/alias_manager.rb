@@ -67,7 +67,7 @@ while continue
 		if user_choise == "quit"
 			continue = false
 			puts "\nHere is your final output:"
-				for i in 0..new_names.length
+				for i in 0...new_names.length
 				puts "\n#{original_names[i]} AKA #{new_names[i]}"
 				end
 		else
