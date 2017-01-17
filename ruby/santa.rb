@@ -1,10 +1,13 @@
 class Santa
-	def initialize (gender, ethnicity)
+	attr_reader :reindeer_ranking, :age, :ethnicity
+	attr_accessor :gender
+	
+	def initialize (gender, ethnicity, age)
 		# puts "initializing Santa instance.."
 		@gender = "#{gender}"
 		@ethnicity = "#{ethnicity}"
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = age
 	end
 
 	def speak
@@ -23,41 +26,24 @@ class Santa
 		@reindeer_ranking.delete_at(@reindeer_ranking.index(reindeer_name))
 		@reindeer_ranking << reindeer_name
 	end
-
-	#setter
-	def gender=(new_gender)
-		@gender = new_gender
-	end
-
-	#getter
-	def reindeer_ranking
-		@reindeer_ranking
-	end
-
-	def age
-		@age
-	end
-
-	def gender
-		@gender
-	end
-
-	def ethnicity
-		@ethnicity
-	end
 end
 
 # santa = Santa.new
 # santa.speak
 # santa.eat_milk_and_cookies("vanilla cookie")
 
+max_santas = 100
+max_age = 140
 santas = []
 example_genders = ["trans male", "cis gender", "other", "female", "pangender", "male", "androgynous"]
 example_ethnicities = ["asian", "indian", "black", "other", "latin", "just a human"]
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+max_santas.times do |i|
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample, rand(0..140))
+  puts "\n--------------------------------------"
+  puts "Santa number #{i+1}\nGender: #{santas[i].gender}\nEthnicity: #{santas[i].ethnicity}\nReindeer Ranking: #{santas[i].reindeer_ranking}\nAge: #{santas[i].age}"
 end
-puts "Current age:"
+
+puts "\nCurrent age:"
 puts "#{santas[0].age}"
 santas[0].celebrate_birthday
 puts "\nNew age:"
