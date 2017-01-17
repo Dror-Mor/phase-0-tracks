@@ -27,6 +27,31 @@ class Puppy
   end
 end
 
+class Kindergarten
+	def initialize
+	end
+
+	def eat
+		puts "snack time!"
+	end
+
+	def build_blocks
+		puts "I'm building blocks!"
+	end
+end
+
+max_children = 50
+kindergarten_class = []
+max_children.times do 
+	kindergarten_class << Kindergarten.new 
+end
+
+kindergarten_class.each do |child|
+	child.eat
+	child.build_blocks
+end
+ 
+
 chompers = Puppy.new
 chompers.speak(3)
 chompers.roll_over
