@@ -25,7 +25,7 @@ class Santa
 	end
 
 	#setter
-	def gender(new_gender)
+	def gender=(new_gender)
 		@gender = new_gender
 	end
 
@@ -36,6 +36,14 @@ class Santa
 
 	def age
 		@age
+	end
+
+	def gender
+		@gender
+	end
+
+	def ethnicity
+		@ethnicity
 	end
 end
 
@@ -59,3 +67,9 @@ puts "#{santas[0].reindeer_ranking}"
 santas[0].get_mad_at("Dasher")
 puts "\n After change:"
 puts "#{santas[0].reindeer_ranking}"
+puts "\nBefore change:"
+puts "#{santas[0].gender}"
+santas[0].gender = "Male"
+puts "\nAfter change:"
+puts "#{santas[0].gender}"
+p santas[0].ethnicity
