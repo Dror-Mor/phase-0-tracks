@@ -11,7 +11,7 @@ class WordGuessing
 	end
 
 	def check_guess(user_guess, user_word)
-		if user_guess == user_word.downcase
+		if user_guess.downcase == user_word.downcase
 			@game_over = true
 			puts "Good job! the word is #{user_word}"
 		elsif @past_guesses.include?(user_guess)
