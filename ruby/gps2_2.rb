@@ -42,6 +42,29 @@ def add_item(grocery_hash, item_name, quantity=1)
 	p grocery_hash
 end
 
+def remove_item(grocery_hash, item_name)
+	grocery_hash.delete_if { |key, value| key == item_name }
+	p grocery_hash
+end
+
+def update_quantity(grocery_hash, item_name, quantity)
+	if grocery_hash.has_key? (item_name)
+		grocery_hash[item_name] = quantity
+	else
+		puts "Item not found."
+	end
+	p grocery_hash
+end
+
+def print_list(grocery_hash)
+	puts "\nHere is your grocery list:"
+	grocery_hash.each do |item, quantity|
+		puts "#{quantity} #{item}"
+	end
+end
 
 list = create_list("carrots apples cereal pizza")
-add_item(list, "pears", 4)
+new_item = add_item(list, "pears", 4)
+remove_item(new_item, "pears")
+update_quantity(new_item, "apples", 10)
+print_list(new_item)
