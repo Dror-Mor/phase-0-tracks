@@ -50,5 +50,7 @@ describe WordGuessing do
 	end
 # status
 	it 'Prints the letters found so far' do
+		wordguessing.check_guess("h")
+		expect(wordguessing.word_so_far[0]).to eq "h"
 	end
 end
