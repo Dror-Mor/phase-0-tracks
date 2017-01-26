@@ -71,5 +71,6 @@ same_value(a,b)
 same_value(c,d)
 same_value(a,d)
 
-arr = array_generator(20)
+arr = array_generator(10)
+console.log(arr)
 longest_item(arr)
