@@ -1,0 +1,45 @@
+
+1.SELECT * FROM shows;
+1|This is us|9.6|true|1
+2|Greys Anatomy|9.5|true|3
+3|NCIS|16.2|true|2
+4|Leathal Wapon|6.2|true|4
+5|Bull|11.1|true|2
+6|Will & Grace|7.1|false|1
+
+2.UPDATE shows SET viewers=8.2 WHERE name="Will & Grace";
+1|This is us|9.6|true|1
+2|Greys Anatomy|9.5|true|3
+3|NCIS|16.2|true|2
+4|Leathal Wapon|6.2|true|4
+5|Bull|11.1|true|2
+6|Will & Grace|8.2|false|1
+
+3.SELECT * FROM shows JOIN networks ON shows.network_id=networks.id;
+1|This is us|9.6|true|1|1|NBC|3
+2|Greys Anatomy|9.5|true|3|3|ABC|2
+3|NCIS|16.2|true|2|2|CBS|1
+4|Leathal Wapon|6.2|true|4|4|FOX|4
+5|Bull|11.1|true|2|2|CBS|1
+6|Will & Grace|8.2|false|1|1|NBC|3
+
+4.SELECT shows.name, networks.name  FROM shows JOIN networks ON shows.network_id=networks.id;
+This is us|NBC
+Greys Anatomy|ABC
+NCIS|CBS
+Leathal Wapon|FOX
+Bull|CBS
+Will & Grace|NBC
+
+5.sqlite> DELETE FROM shows WHERE name="Bull";
+1|This is us|9.6|true|1
+2|Greys Anatomy|9.5|true|3
+3|NCIS|16.2|true|2
+4|Leathal Wapon|6.2|true|4
+6|Will & Grace|8.2|false|1
+
+
+—————
+SELECT shows.name, networks.name FROM shows INNER JOIN networks ON shows.network_id=networks.id WHERE shows.running="false";
+Will & Grace|NBC
+
