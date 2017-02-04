@@ -1,0 +1,30 @@
+1) SELECT * FROM users, businesses, reviews;
+1|John|do|1|Starbucks|1|5|Best in the world|1|2
+1|John|do|1|Starbucks|2|4|Great place. not gay enough.|2|3
+1|John|do|2|Janes cafe|1|5|Best in the world|1|2
+1|John|do|2|Janes cafe|2|4|Great place. not gay enough.|2|3
+1|John|do|3|Blue Bottle|1|5|Best in the world|1|2
+1|John|do|3|Blue Bottle|2|4|Great place. not gay enough.|2|3
+2|Ansatasia|Beaverhousen|1|Starbucks|1|5|Best in the world|1|2
+2|Ansatasia|Beaverhousen|1|Starbucks|2|4|Great place. not gay enough.|2|3
+2|Ansatasia|Beaverhousen|2|Janes cafe|1|5|Best in the world|1|2
+2|Ansatasia|Beaverhousen|2|Janes cafe|2|4|Great place. not gay enough.|2|3
+2|Ansatasia|Beaverhousen|3|Blue Bottle|1|5|Best in the world|1|2
+2|Ansatasia|Beaverhousen|3|Blue Bottle|2|4|Great place. not gay enough.|2|3
+3|Jack|McFarland|1|Starbucks|1|5|Best in the world|1|2
+3|Jack|McFarland|1|Starbucks|2|4|Great place. not gay enough.|2|3
+3|Jack|McFarland|2|Janes cafe|1|5|Best in the world|1|2
+3|Jack|McFarland|2|Janes cafe|2|4|Great place. not gay enough.|2|3
+3|Jack|McFarland|3|Blue Bottle|1|5|Best in the world|1|2
+3|Jack|McFarland|3|Blue Bottle|2|4|Great place. not gay enough.|2|3
+
+2) SELECT * FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id;
+1|5|Best in the world|1|2|1|Starbucks|2|Ansatasia|Beaverhousen
+2|4|Great place. not gay enough.|2|3|2|Janes cafe|3|Jack|McFarland
+
+3)SELECT reviews.stars, reviews.comment, businesses.name, users.first_name FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id;
+5|Best in the world|Starbucks|Ansatasia
+4|Great place. not gay enough.|Janes cafe|Jack
+
+4) SELECT reviews.stars, reviews.comment, businesses.name, users.first_name FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id WHERE businesses.id = 1;
+5|Best in the world|Starbucks|Ansatasia
