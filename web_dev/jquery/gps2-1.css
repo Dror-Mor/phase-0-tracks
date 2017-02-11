@@ -1,0 +1,48 @@
+body{
+	font-family: tahoma;
+	background: linear-gradient(141deg, #b5e0ff 0%, #7ac7ff 51%, #c8e3f7 75%);
+}
+
+header{
+	width: 940px;
+	text-align: center;
+	margin: auto;
+	color:white;
+	background-image: url(tools_cropped.png);
+	background-repeat: repeat;
+	background-position: center;
+	background-size: 10%;
+}
+
+footer{
+	width: 940px;
+	text-align: center;
+	margin: auto;
+	color:white;
+	padding: 10px 0 10px 0;
+}
+
+code{
+	font-family: serif;
+}
+
+.center
+{
+	width: 945px;
+    margin: auto;
+}
+
+.column-1 {
+	display: inline-block;
+	width: 450px;
+	padding-right: 20px;
+
+}
+
+.column-2 {
+	display: inline-block;
+	width: 450px;
+	vertical-align: top;
+	padding-left: 20px;
+
+}
